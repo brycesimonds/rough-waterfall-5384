@@ -8,3 +8,4 @@
 </ul>
 <br>
 <p>The supermarket this customer belongs to is: <%= @customer.supermarket.name %></p>
+<p>Total price of all items: <%= number_to_currency(@customer.item_total) %></p>
