@@ -1,4 +1,5 @@
 #Bryce Simonds - starting now
+3:45pm Done
 # Supermarket Sweep
 
 Fork this repository and clone your newly created repository. At the end of the challenge, push your code to your repository and DM all of the instructors with the link to your repository.
