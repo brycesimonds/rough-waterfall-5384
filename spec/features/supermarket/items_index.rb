@@ -17,12 +17,17 @@ RSpec.describe 'the supermarket show page' do
     customer_item_3 = CustomerItem.create!(customer_id: customer_1.id, item_id: item_4.id)
 
     visit "/supermarkets/#{supermarket_1.id}/items"
-    save_and_open_page
-    expect(page).to have_content("PB")
-    expect(page).to have_content("Jelly")
-    expect(page).to have_content(item_3.name)
-    expect(page).to_not have_content(item_4.name)
-    #unsure how to check for uniqueness
-  end
+
+    within '#item-0' do
+      expect(page).to have_content("Bread")
+    end
+    within '#item-1' do
+      expect(page).to have_content("Jelly")
+    end
+    within '#item-2' do
+      expect(page).to have_content("PB")
+    end
+    expect(page).to_not have_css('#item-3')
+    #unsure how to check for uniqueness, this was my attempt :)
   end
 end

@@ -1,7 +1,9 @@
 <h1><%= @supermarket.name %>'s Item Index Page</h1>
 <h3>This supermarkets items:</h3>
 <ul>
-    <% @supermarket.unique_items.each do |item| %>
+    <% @supermarket.unique_items.each_with_index do |item, index| %>
+    <div id="item-<%= index %>">
         <li><%= item.name %></li>
+    </div>
     <% end %>
 </ul>
