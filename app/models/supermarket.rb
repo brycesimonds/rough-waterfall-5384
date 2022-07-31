@@ -6,4 +6,12 @@ class Supermarket < ApplicationRecord
   def unique_items
     items.select('items.name').group('items.name')
   end
+
+  def top_3_items
+    items.joins(:customers)
+    .select('items.*, count(customers.id) as customer_count')
+    .group("items.id")
+    .order(customer_count: :desc)
+    .limit(3)
+  end
 end
