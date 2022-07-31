@@ -1,1 +1,7 @@
 <h1><%= @supermarket.name %>'s Item Index Page</h1>
+<h3>This supermarkets items:</h3>
+<ul>
+    <% @supermarket.unique_items.each do |item| %>
+        <li><%= item.name %></li>
+    <% end %>
+</ul>

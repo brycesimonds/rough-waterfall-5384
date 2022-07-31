@@ -75,7 +75,7 @@ RSpec.describe 'the supermarket show page' do
     customer_item_3 = CustomerItem.create!(customer_id: customer_1.id, item_id: item_4.id)
 
     visit "/supermarkets/#{supermarket_1.id}/items"
-
+    save_and_open_page
     expect(page).to have_content("PB")
     expect(page).to have_content("Jelly")
     expect(page).to have_content(item_3.name)
