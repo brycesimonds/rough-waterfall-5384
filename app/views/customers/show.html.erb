@@ -1,1 +1,8 @@
 <h1><%= @customer.name %>'s Show Page</h1>
+<br>
+<h3>Items:</h3>
+<ul>
+    <% @customer.items.each do |item| %>
+        <li><%= item.name %></li>
+    <% end %>
+</ul>
