@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'the supermarket show page' do
   it "has the name of the supermarket" do
     supermarket_1 = Supermarket.create!(name: "Whole Foods", location: "Denver")
-    supermarket_1 = Supermarket.create!(name: "Shaws", location: "Millbury")
+    supermarket_2 = Supermarket.create!(name: "Shaws", location: "Millbury")
 
     customer_1 = Customer.create!(name: "Hellfire", supermarket_id: supermarket_1.id)
 
