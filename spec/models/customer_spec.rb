@@ -20,7 +20,7 @@ RSpec.describe Customer, type: :model do
       customer_item_2 = CustomerItem.create!(customer_id: customer_1.id, item_id: item_2.id)
       customer_item_3 = CustomerItem.create!(customer_id: customer_1.id, item_id: item_3.id)
 
-      expect(customer_1.item_total).to eq(10)
+      expect(customer_1.item_total).to eq(12)
     end
   end
 end
