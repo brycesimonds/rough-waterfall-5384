@@ -57,7 +57,7 @@ RSpec.describe 'the customer show' do
     customer_item_3 = CustomerItem.create!(customer_id: customer_1.id, item_id: item_3.id)
 
     visit "/customers/#{customer_1.id}"
-   save_and_open_page
+
     expect(page).to have_content("Total price of all items: $12.00")
   end
 end
