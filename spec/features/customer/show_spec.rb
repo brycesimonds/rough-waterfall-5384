@@ -38,7 +38,7 @@ RSpec.describe 'the customer show' do
     customer_item_3 = CustomerItem.create!(customer_id: customer_1.id, item_id: item_3.id)
 
     visit "/customers/#{customer_1.id}"
-    
+   
     expect(page).to have_content("The supermarket this customer belongs to is: Whole Foods")
     expect(page).to_not have_content("The supermarket this customer belongs to is: Shaws")
   end
