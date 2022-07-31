@@ -1,7 +1,7 @@
 <h1><%= @supermarket.name %>'s Show Page</h1>
 <%= link_to 'View all this supermarkets items', "/supermarkets/#{@supermarket.id}/items" %>
 <div id='3-popular-items'>
-    <% @supermaket.top_3_items.each do |item| %>
+    <% @supermarket.top_3_items.each do |item| %>
         <%= item.name %>
     <% end %>
 </div>
